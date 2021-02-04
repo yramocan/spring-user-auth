@@ -43,7 +43,7 @@ public class RegistrationService {
     }
 
     public String register(RegistrationRequest request) {
-        Boolean isValidEmail = emailValidator.test(request.getEmail());
+        boolean isValidEmail = emailValidator.test(request.getEmail());
 
         if (!isValidEmail) {
             throw new IllegalStateException("Email is not valid.");
