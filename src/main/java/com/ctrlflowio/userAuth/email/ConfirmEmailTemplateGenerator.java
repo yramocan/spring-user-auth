@@ -2,7 +2,7 @@ package com.ctrlflowio.userAuth.email;
 
 public final class ConfirmEmailTemplateGenerator {
     public static String generateTemplate(String name, String token) {
-        final String baseURL = "https://sendgrid.com";
+        final String baseURL = "http://localhost";
         final String confirmURL = String.format("%s/api/v1/register/confirmEmail?token=%s", baseURL, token);
 
         return

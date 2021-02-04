@@ -28,6 +28,8 @@ public class EmailService implements EmailSender {
             helper.setTo(to);
             helper.setFrom("no-reply@ctrlflow.io");
             helper.setSubject(subject);
+
+            mailSender.send(mimeMessage);
         } catch (MessagingException e) {
             LOGGER.error("Failed to send email", e);
             throw new IllegalStateException("Failed to send email.");
