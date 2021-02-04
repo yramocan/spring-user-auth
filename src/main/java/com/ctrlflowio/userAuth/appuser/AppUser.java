@@ -56,6 +56,10 @@ public class AppUser implements UserDetails {
         return Collections.singletonList(authority);
     }
 
+    public String getFullName() {
+        return String.format("%s %s", getFirstName(), getLastName());
+    }
+
     @Override
     public String getPassword() {
         return password;
@@ -85,4 +89,5 @@ public class AppUser implements UserDetails {
     public boolean isEnabled() {
         return isEnabled;
     }
+
 }
